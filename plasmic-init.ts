@@ -1,4 +1,6 @@
 import { initPlasmicLoader } from "@plasmicapp/loader-nextjs";
+import CustomButton from "./components/CustomButton";
+import HeroPrompt from "./components/HeroPrompt";
 
 export const PLASMIC = initPlasmicLoader({
   projects: [
@@ -22,4 +24,33 @@ export const PLASMIC = initPlasmicLoader({
 // http://localhost:3000/plasmic-host).  See
 // https://docs.plasmic.app/learn/app-hosting/#set-a-plasmic-project-to-use-your-app-host
 
-// PLASMIC.registerComponent(...);
+// Register your custom components
+PLASMIC.registerComponent(CustomButton, {
+  name: "CustomButton",
+  props: {
+    text: {
+      type: "string",
+      defaultValue: "Click Me"
+    },
+    variant: {
+      type: "choice",
+      options: ["primary", "secondary", "danger"],
+      defaultValue: "primary"
+    },
+    className: {
+      type: "string",
+      defaultValue: ""
+    }
+  }
+});
+
+// Register HeroPrompt component
+PLASMIC.registerComponent(HeroPrompt, {
+  name: "HeroPrompt",
+  props: {
+    className: {
+      type: "string",
+      defaultValue: ""
+    }
+  }
+});
