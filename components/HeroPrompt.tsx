@@ -46,7 +46,7 @@ export default function HeroPrompt({ className = "" }: HeroPromptProps) {
       <div className="w-full max-w-4xl space-y-8 text-center">
         <div className="space-y-4">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-            Surveys That{" "}
+            Surveys Poop{" "}
             <span className="bg-gradient-to-r from-purple-600 to-cyan-500 bg-clip-text text-transparent">
               Interview
             </span>
